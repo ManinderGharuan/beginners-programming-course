@@ -1,0 +1,130 @@
+#+title:Git 
+
+  - Distributed version control system
+
+  - Git store its data as a stream of snapshots of file-system
+    - if files have not changed then git does not them store again
+
+  - It is different from other CS (Version Control System) which store information as a list of file-based changes
+
+  - Operations need local files and resources to operate, no information is needed from another computer on your network
+
+  - Git reads history directly from local database
+
+  - We can not change the content of any file or directory without git knowing
+    - Git uses SHA-1 hash for checksumming, that has 40-hexadecimal character string
+    - Git stores everything in its database not by name but by hash value of its content
+
+  - After committing a snapshot into git, it is very difficult to lose data
+
+  - Git has three states in which files can reside: /Committed/, /Modified/, and /staged/
+    - *Committed*: data is safely stored in local database.
+    - *Modified*: File has been changed but not committed yet
+    - *Staged*: modified files has been marked to go in next commit snapshot.
+
+  - Three main sections of a Git project:
+    - /Git directory(Repository)/: Where git stores the metadata and object database for project
+    - /working directory/: A single checkout of one version of the project
+    - /staging area/: A file, generally contained in your git directory, that stores information about what will go into your next commit
+
+  - Git workflow:
+    - Modify files in working directory
+    - Adding snapshots into staging area
+    - Do a commit, which stores the snapshot permanently to git directory
+
+* Git command line
+
+ - *git config*
+   - Configure various settings of git repository (or globally)
+     
+     e.g
+     #+BEGIN_SRC bash
+       # set user name and email address for identity
+       git config --global user.name "name"
+       git config --global user.email email@example.com
+
+       # List all settings
+       git config --list
+     #+END_SRC
+
+ - *git init*
+   - Create new local repository
+   - Initialize a new empty repository
+
+ - *git add*
+   - Add one or more files to staging
+
+     e.g
+     #+BEGIN_SRC bash
+     git add <filename>
+
+     git add *
+     #+END_SRC
+
+ - *git commit*
+   - Take snapshot of all the changes
+
+     e.g
+     #+BEGIN_SRC bash
+     git commit -m "Message"
+
+     git commit -a -m "Message"
+     #+END_SRC
+ 
+ - *git status*
+   - List the files which are changed
+   - and those you still need to add or commit
+
+     e.g
+     #+BEGIN_SRC bash
+     git status
+     #+END_SRC
+
+ - *git clone*
+   - Makes a git repository copy from a remote source
+   - Create copy of a local repository
+
+     e.g
+     #+BEGIN_SRC bash
+     git clone /path/to/repository
+
+     git clone username@host:/path/to/repository
+     #+END_SRC
+
+ - *git remote*
+   - lists the shortnames of each remote handle specified
+   - origin is the default name git gives to the server
+	 
+	 e.g
+   #+BEGIN_SRC bash
+	 git remote
+
+	 git remote -v        #It shows the URLs that git has stored for the shortname to be used when reading and writing to that remote
+	 #+END_SRC
+
+ - *git remote add <shortname> <url>*
+   - To add a new remote git repository as a shortname
+	
+	 e.g
+	 #+BEGIN_SRC bash
+	 git remote add <shortname> <url>
+	 #+END_SRC
+
+ - *git push <remote> <branch>*
+   - Upload code/changes/snapshot from given <branch> to <remote>
+
+	 e.g
+	 #+BEGIN_SRC bash
+	 git push origin master
+	 #+END_SRC
+
+ - *git fetch*
+   - download all the data from remote 
+
+	 e.g
+	 #+BEGIN_SRC bash
+	 git fetch <remote-name>
+	 #+END_SRC
+
+ - *git pull <remote> <branch>*
+   download and merge changes from <remote>/<branch> into local <branch>
