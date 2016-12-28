@@ -1,0 +1,30 @@
+* Lecture 1
+  - Computation
+    - Goals helps to think like a computer scientist
+    - Knowledge divided into two fparts /declarative/ and /imperative/ knowledge
+    - *Declarative* tells how to test something but it does not tell how to
+    - *Imperative* is description of how to deduce something
+    - Earliest computer are fixed program computer
+      - It design to do specific things for example /Calculato/ it does arithmetic
+      - *Antanasoff* is designed computational thing and it solve linear equations
+      - *Bombe* is designed to break codes
+    - Stored program computer
+    - A program is a sequence of instructions
+    
+  - There is no any best language
+    - All are describing different things
+
+  - There are three dimension: /low level vs high level/, /General vs Targeted/, /Interpreted vs Compiled/ 
+    - This is a high level or low level language
+    - *Low-level language* is a assembly programming, It moves data from one location memory to another
+    - *High-level language* is set of rich primitive things and there are trade-offs between both
+    - *Interpreted* takes the source code and operating directly on code at run time
+    - *Compiled language* have an intermediate which takes source code
+      - and runs through compiler and it creates object code
+      - Object code does two things: catch bugs and convert into instructions
+    - There are trade-offs between /Interpreter/ and /Compiler/
+      - Interpreter language is easier to debug
+      - Compiled language is faster in term of execution
+
+  - *Python*
+    - Python is a high-level language, general-purpose language and interpreter language
