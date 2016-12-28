@@ -128,3 +128,48 @@
 
  - *git pull <remote> <branch>*
    download and merge changes from <remote>/<branch> into local <branch>
+
+* Github
+
+** Setting up SSH Keys
+
+  - *Generate SSH key*
+
+     #+BEGIN_SRC bash
+     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"   # '-C' C is capital
+     #+END_SRC 
+
+  
+
+    + When prompted to "Enter a file in which to save the key," press /Enter/
+    + When prompted to type a secure passphrase, press /Enter/ for ignoring pass code
+          
+  - *Add SSH key to the ssh-agent*
+    - Start ssh-agent
+       #+BEGIN_SRC bash
+       eval "$(ssh-agent -s)"
+       #+END_SRC
+       
+    - Add SSH key to ssh-agent
+      #+BEGIN_SRC bash
+      ssh-add ~/.ssh/id_rsa
+      #+END_SRC 
+
+  - *Add new SSH key to GitHub account*
+
+    * Copy SSH key to clipboard
+
+      #+BEGIN_SRC bash
+      sudo apt-get install xclip
+      #Download xclip if not installed.
+
+      xclip -sel clip < ~/.ssh/id_rsa.pub
+      #+END_SRC
+
+      - In upper-right corner of GitHub page, click on profile photo, then click settings
+      - In "Personal Setting" sidebar, click "SSH and GPG Keys"
+      - Click "New SSH key" or "Add SSH key"
+      - In "Title" field, add descriptive label
+      - In "key" field paste your key which we already copied from command
+      - Click Add SSH key
+      - If prompted, confirm GitHub password
