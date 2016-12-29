@@ -1,38 +1,66 @@
 * Lecture 1
-  - Computation
-    - Goals helps to think like a computer scientist
-    - Knowledge divided into two fparts /declarative/ and /imperative/ knowledge
-    - *Declarative* tells how to test something but it does not tell how to
-    - *Imperative* is description of how to deduce something
-    - Earliest computer are fixed program computer
-      - It design to do specific things for example /Calculato/ it does arithmetic
-      - *Antanasoff* is designed computational thing and it solve linear equations
-      - *Bombe* is designed to break codes
-    - Stored program computer
-    - A program is a sequence of instructions
-    
-  - There is no any best language
-    - All are describing different things
 
-  - There are three dimension: /low level vs high level/, /General vs Targeted/, /Interpreted vs Compiled/ 
-    - This is a high level or low level language
-    - *Low-level language* is a assembly programming, It moves data from one location memory to another
-    - *High-level language* is set of rich primitive things and there are trade-offs between both
-    - *Interpreted* takes the source code and operating directly on code at run time
-    - *Compiled language* have an intermediate which takes source code
-      - and runs through compiler and it creates object code
-      - Object code does two things: catch bugs and convert into instructions
-    - There are trade-offs between /Interpreter/ and /Compiler/
-      - Interpreter language is easier to debug
-      - Compiled language is faster in term of execution
+  - *Computation*
+    - Declarative knowledge
+      - Tells you *what* something is, not *how* to do it
+      - Closest it gets is allow us to *test* it
 
-  - *Python*
-    - Python is a high-level language, general-purpose language and interpreter language
+      e.g
+      #+BEGIN_EXAMPLE
+      \sqrt{x} is a number ~y~ s.t y^2 = x and y != 0
+      #+END_EXAMPLE
+
+    - Imperative knowledge
+      - Tells us *how* to do something
+      - A sequence of instructions to do something
+
+      e.g
+      #+BEGIN_EXAMPLE
+      - Start with a guess ~g~
+      - If g^2 = x, stop, return g
+      - else g = (g + x/g) / 2
+      - repeat
+      #+END_EXAMPLE
+
+    - *Computation* is about capturing the process of coming up with imperative process to do something
+    - A computation is based on a fixed set of primitive which are used to create complex computation
+
+  - *Programming language*
+    - There is no best programming-language, but some languages are better at doing certain things than other languages
+    - Language used in this course is python, but the course is not about Python. It is about how to program, Python is only a programming language choice and once we know to code in one language (Python in our case), we can learn a new language easily
+    - Different dimensions of a language
+      - High vs Low level
+
+        Low level: Very close to hardware. Primitives are moving data from one location in memory to other High level: Much richer set of primitives
+
+      - General vs targeted
+
+        General: For general purpose programming. Can be used to do a lot of things e.g Python Targeted: Designed for a specific purpose, e.g Maths(Mat-lab)
+
+      - Interpreted vs Compiled
+
+        Interpreted: Interpreted work directly on source-code at run time Compiled: Compiler complies code to intermediate form (Object code) which actually runs finally
+
+    - Python is
+      - High level
+      - General purpose
+      - Interpreted
+    - *Syntax of a language*
+
+      What are the legal expressions in this language
+
+    - *Static Semantics of a language
+
+      says which programs are meaningful i.e which expressions make sense
+
+    - *Semantics of a language
+
+      says what a program means, i.e what happen when the program runs
 
 * Lecture 2
   - /Operands/ and /operators/ are the expressions to do operations
 
-  - Expresions can type directly in /interpreter/
+  - Expressions can type directly in /interpreter/
     - Interpreter evaluate expressions and print
     - Multiplication between two integer, will return an interger value
     - But multiplication between integer and string, will return new string
@@ -40,12 +68,12 @@
     - Cannot add interger value with string
       e.g
       #+BEGIN_SRC python
-      3*4 
+      3*4
       #Return 12
 
       3*'ab'
       #Return 'ababab'
-      
+
       'a'+'bcd'
       #Joined two strings 'abcd'
 
