@@ -28,3 +28,112 @@
 
   - *Python*
     - Python is a high-level language, general-purpose language and interpreter language
+
+* Lecture 2
+  - /Operands/ and /operators/ are the expressions to do operations
+
+  - Expresions can type directly in /interpreter/
+    - Interpreter evaluate expressions and print
+    - Multiplication between two integer, will return an interger value
+    - But multiplication between integer and string, will return new string
+    - Adding two string together, will combine that strings
+    - Cannot add interger value with string
+      e.g
+      #+BEGIN_SRC python
+      3*4 
+      #Return 12
+
+      3*'ab'
+      #Return 'ababab'
+      
+      'a'+'bcd'
+      #Joined two strings 'abcd'
+
+      3+'ab'
+      #Error because interger cannot join with string
+
+      str(3)+'ab'
+      #Return '3ab', str() is a type conservation
+      #+END_SRC
+    - /Type conservation/: Convert integer into string
+
+  - *Operator precedence*
+    - Exponentiation are done before multiplication or division are done before addition and subtraction
+    - Expressions in parentheses are done before multiplication
+
+      e.g
+      #+BEGIN_SRC python
+      3+4*5
+      #Return 23, because multiplication done before addition
+
+      (3+4)*5
+      #Return 35, because addition under parentheses done before multiplication
+      #+END_SRC
+
+  - *Variables*
+    - Variables are using an assignment statement which has there own values
+    - It stores somewhere in memory
+
+      e.g
+      #+BEGIN_SRC python
+      x = 3
+      #It assign integer value to variable x
+      #+END_SRC
+
+    - What's the type of variable
+      - Gets inherit value
+      - Assiging variables are dynamic
+
+        e.g
+        #+BEGIN_SRC python
+        x = 3
+        #x having integer value
+
+        x = 'abc'
+        #Now value of x is changed integer into string
+        #+END_SRC
+
+  - *Statement*
+    - Legal commands that python interpret: /print/, /assignment/
+    - *Print* put it back out in the screen
+    - *Assignmen* binding a name to a value
+
+  - *Styles*
+    - Styles are very important in every programing language
+    - It help to understand code easily
+    - *Comment*: # (/HASH/) is using for comment section in python
+      - Comments can help to find what is going on inside code
+    - *Variable names*: Chosse variable names that make sense
+      - It tells what is trying to capture inside variable
+
+  - *Branching programs*: can change the order of instructions based on a test usually value of a variable
+    - *if statement*: if that value is true, then do set of things and if that value is false then skip that step
+    - *else statement*: if that value is false then do this part
+
+      Syntax
+      #+BEGIN_EXAMPLE
+      if <some text>:
+         Block of instruction
+      else:
+         Block of instruction
+      #+END_EXAMPLE
+
+      e.g
+      #+BEGIN_SRC python
+      x = 15
+      if (x/2)*2 == x:
+         print 'Even'
+      else: print 'Odd'
+      #x is a variable which is having integer value 15
+      #if condition is true do next thing after the colon
+      #The sign '==' is comparing both sides
+      #if condition false else will do next thing after the colon
+      #+END_SRC
+
+  - *Boolean Combination*: /and/, /or/, /not/
+    - There are two types of boolean is /true/, /false/
+    - *AND*: if both arguments are true it's true
+    - *OR*: if one argument true it's true
+    - *NOT*: if argument is not true it's true
+
+ - *Iteration or loops*: resuse same code over and over again
