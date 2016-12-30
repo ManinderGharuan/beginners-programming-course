@@ -167,3 +167,127 @@
     - *NOT*: if argument is not true it's true
 
   - *Iteration or loops*: reuse same code over and over again
+
+* Lecture 3
+-We have looked at three different kinds of things: /Data/, /Operations/ and /Statements/
+  - *Data*:
+    - We have done /numbers/, /strings/ and /Boolean/
+
+  - *Operations*:
+    - /Additions/ and /multiplications/
+    - /and/, /or/
+
+  - *Statements*:
+    - /Assignment/
+    - /input/output/ (e.g raw input for input and print for output)
+    - /Branches/
+    - /loop mechanisms/ (e.g while)
+
+** Iterative programs
+- Iterative is used to describe a situation in which a sequence of instructions can be executed multiple times
+- Following are the steps
+  - Choose a variable that count
+  - Initialize outside the loop
+  - Setup end test (variable)
+  - Construct block
+    - Change variable
+  - What to do when done
+
+- *Flow chart*
+  - Flow chart is how to structure the code
+
+#+BEGIN_SRC python
+x = 16                #Initialize variable
+ans = 0               #Variale that count
+while ans*ans < x:    #Setup end test or condition
+  ans = ans + 1       #Change variable
+print ans             #Display 'ans' when done
+#+END_SRC
+
+Every looping construct always able to terminate and it does give a reasonable answer
+
+** Defensive programming
+ - Make sure there is no syntax error or any infinite loop
+
+e.g
+#+BEGIN_SRC python
+x = 16
+ans = 0
+if x >= 0;
+  while ans*ans < x:
+    ans = ans + 1
+  if ans*ans != x:
+    print x, ' is not a perfect number'
+  else: print ans
+else: print x, ' is a negative number'
+#+END_SRC
+
+** Exhaustive enumeration
+- Try reasonable values until you find the solution
+
+  e.g
+  #+BEGIN_SRC python
+  x = 10
+  i = 1
+  while i<x:
+    if x%i == 0:
+      print 'divisor ', i
+    i = i + 1
+  #+END_SRC
+
+** For loop
+- for loop is updating variable automatically
+  - It allows to be sure that /For loop/ is going to terminate
+
+  syntax
+  #+BEGIN_EXAMPLE
+  for <var> in <some collection>:
+  block of code
+  #+END_EXAMPLE
+  Using that variable as placeholder have it walk through collection that starting at the first thing, execute that code, then next thing, execute that code, and so on
+
+ e.g
+#+BEGIN_SRC python
+x = 10
+for i in range(1, x):   #It gives all integer from 1 up to x
+  if x%i == 0:
+    print 'divide ', i
+#+END_SRC
+
+** Range
+- Range is build-in python function
+- It gives all the integer from lower to upper
+
+  e.g
+  #+BEGIN_SRC python
+  range(1, 10)  #It gives integer from 1 to 10
+  #1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+  #+END_SRC
+
+** Tuple
+- This is an ordered sequence of elements
+- It is immutable
+- Representation of tuple is square bracket, followed by a sequence of element, separated by commas and followed by a close square bracket
+  e.g t = (1, 2, 3, 4)
+- *Selection* using to select the positions or index, e.g t[1]
+- *Slicing* using to pick up pieces, e.g t[1:3]
+
+e.g
+#+BEGIN_SRC python
+test = (1, 2, 3, 4)
+test[0]
+# 1
+
+test[3]
+# 4
+
+test[-1]
+# 4
+
+test[1:3]
+#(2, 3)
+#+END_SRC
+
+** String
+- It is an ordered sequence of characters
+- String also support selection and slicing
