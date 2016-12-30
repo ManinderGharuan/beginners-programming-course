@@ -56,38 +56,43 @@
     - *Semantics of a language
 
       says what a program means, i.e what happen when the program runs
-
 * Lecture 2
-  - /Operands/ and /operators/ are the expressions to do operations
+  - /Operands/ and /operators/ make the expressions to do operations
 
-  - Expressions can type directly in /interpreter/
+  - Expressions can be typed directly in /interpreter/
     - Interpreter evaluate expressions and print
-    - Multiplication between two integer, will return an interger value
-    - But multiplication between integer and string, will return new string
-    - Adding two string together, will combine that strings
-    - Cannot add interger value with string
-      e.g
-      #+BEGIN_SRC python
-      3*4
-      #Return 12
+    - *Operator Overloading*
+      - Same operator behaves differently with different types, e.g + (plus) operator will, perform arithmetic addition on two numbers, concatenate two strings
+      - Multiplication between two integer, will return an interger value
+        - But multiplication between integer and string, will return new string
+      - Adding two string together, will combine that strings
 
-      3*'ab'
-      #Return 'ababab'
+     - Type checking in python
+        - Cannot add interger value with string
 
-      'a'+'bcd'
-      #Joined two strings 'abcd'
+          e.g
+          #+BEGIN_SRC python
+          3*4
+          # 12
 
-      3+'ab'
-      #Error because interger cannot join with string
+          3*'ab'
+          # 'ababab'
 
-      str(3)+'ab'
-      #Return '3ab', str() is a type conservation
-      #+END_SRC
-    - /Type conservation/: Convert integer into string
+          'a'+'bcd'
+          #Joined two strings 'abcd'
+
+          3+'ab'
+          #Error because interger cannot join with string
+
+          str(3)+'ab'
+          # '3ab', str() is a type conversion
+          #+END_SRC
+        - /Type conversion/: Convert integer into string
 
   - *Operator precedence*
+    - Operators have their priority order in which they operate
     - Exponentiation are done before multiplication or division are done before addition and subtraction
-    - Expressions in parentheses are done before multiplication
+    - Expressions in parenthesis are done before multiplication (parenthesis are executed first)
 
       e.g
       #+BEGIN_SRC python
@@ -99,8 +104,7 @@
       #+END_SRC
 
   - *Variables*
-    - Variables are using an assignment statement which has there own values
-    - It stores somewhere in memory
+    - Variables are created using an assignment statement and they have there own values
 
       e.g
       #+BEGIN_SRC python
@@ -108,17 +112,15 @@
       #It assign integer value to variable x
       #+END_SRC
 
-    - What's the type of variable
-      - Gets inherit value
-      - Assiging variables are dynamic
+    - Assigning a variable gives it a data-type which is dynamically derived from its value
 
         e.g
         #+BEGIN_SRC python
         x = 3
-        #x having integer value
+        #x has integer value and type
 
         x = 'abc'
-        #Now value of x is changed integer into string
+        #Now type of x is changed from integer to string
         #+END_SRC
 
   - *Statement*
@@ -126,7 +128,7 @@
     - *Print* put it back out in the screen
     - *Assignmen* binding a name to a value
 
-  - *Styles*
+  - *Style*
     - Styles are very important in every programing language
     - It help to understand code easily
     - *Comment*: # (/HASH/) is using for comment section in python
@@ -135,8 +137,8 @@
       - It tells what is trying to capture inside variable
 
   - *Branching programs*: can change the order of instructions based on a test usually value of a variable
-    - *if statement*: if that value is true, then do set of things and if that value is false then skip that step
-    - *else statement*: if that value is false then do this part
+    - *if statement*: if test is true, then do set of things and if test is false then skip that step
+    - *else statement*: if test is false then do this part
 
       Syntax
       #+BEGIN_EXAMPLE
@@ -159,9 +161,9 @@
       #+END_SRC
 
   - *Boolean Combination*: /and/, /or/, /not/
-    - There are two types of boolean is /true/, /false/
+    - There are two types of Boolean is *True*, *False*
     - *AND*: if both arguments are true it's true
     - *OR*: if one argument true it's true
     - *NOT*: if argument is not true it's true
 
- - *Iteration or loops*: resuse same code over and over again
+  - *Iteration or loops*: reuse same code over and over again
