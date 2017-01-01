@@ -388,3 +388,97 @@ test[1:3]
   #+END_EXAMPLE
 
 - *Bisection method* is a root-finding method
+
+* Lecture 6
+
+** Bisection method
+- It is related to binary search
+- It finds the square root
+  - The basic idea that we had some sort of a line and the answer was somewhere between that line
+    - This is a kind of recursive thinking
+
+e.g
+#+BEGIN_SRC python  def squareRootBi(x, epsilon):
+      """Assumes x >= 0 and epsilon > 0
+         Return y s_t. y*y is within epsilon of x"""
+      assert x >= 0, 'x must be non-negative, not' + str(x)
+      assert epsilon > 0, 'epsilon must be positive, not' + str(epsilon)
+      low = 0
+      high = x
+      guess = (low + high)/2.0
+      ctr = 1
+      while abs(guess**2 - x) > epsilon and ctr <= 100:
+          if guess**2 < x:
+              low = guess
+          else:
+              high = guess
+          guess = (low + high)/2.0
+          ctr += 1
+      assert ctr <= 100, 'Iteration count exceeded'
+      print 'Bi method. Num. iterations:', ctr, 'Estimate', guess
+      return guess
+
+  def testBi():
+      print '  squareRoot(4, 0.0001)'
+      squareRootBi(4, 0.0001)
+      print '  squareRoot(9, 0.0001)'
+      squareRootBi(9, 0.0001)
+#+END_SRC
+
+- *Assert statements*: is expecting to always be true at that point in the code, if it is false at run time, an assertion failure results, which typically causes the program to crash
+- *Regression testing*: is done to make sure that old code still works once the new code changes are done
+
+** Non-scalar
+- We have done two non-scalar types: *Tuples* and *Strings*
+- Tuples and strings are immutable
+- *Mutable types*: Things which can change (i.e lists)
+
+** List
+*Lists*: different from string in two ways
+  - It is mutable
+  - The values need not be characters (They can be number, characters, strings and can other lists)
+  - e.g: techs = ['MIT', 'cal tech'] (It takes variable techs and it makes point to a list with two items in it: 'MIT' and 'cal tech'
+  - *append* is method using to add new item in list
+
+    e.g
+    #+BEGIN_SRC python
+      univs = []  # This is an empty list
+      univs.append('teach') # Now new string teach is added in list
+
+      # It can append another list inside list
+      teachs = ['MIT', 'python']
+      test = []
+      test.append(teachs) # It will add teachs list inside test list (i.e [['MIT', 'python]])
+
+      # We can also add two lists inside list
+      learn = ['git', 'coding']
+      test.append(learn) # Now test = (equals to) [['MIT', 'python'], ['git', 'coding']]
+    #+END_SRC
+
+  - We can iterate any list with for loop
+
+    e.g
+    #+BEGIN_SRC python
+      teachs = ['MIT', 'python']
+      learn = ['git', 'coding']
+      test = []
+
+      test.append(teachs)
+      test.append(learn)
+
+      for i in test:
+          print i
+          for e in i:
+              print e
+
+      # ['MIT', 'python']
+      # Mit
+      # python
+      # ['git', 'coding']
+      # git
+      # coding
+    #+END_SRC
+
+  - *remove*: is the list method using to remove object from the list
+    - It takes two arguments list name and value which want to remove (e.g learn.remove('coding'))
+      - It will search through the list until first time it finds value and then it will remove it from list
