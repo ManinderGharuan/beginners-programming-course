@@ -356,3 +356,35 @@ test[1:3]
             ans = s[0] == s[-1] and isPalindrome1(s[1:-1], indent + indent)
             return ans
   #+END_SRC
+* Lecture 5
+- Computers are supposed to be good for crunching numbers
+
+- Python has two different type of numbers
+  - *int*
+  - Python unlike some languages called arbitrary precision integers
+  - *float*
+    - IEEE 754 (Floating point)
+      - Variant of scientific notation
+      - /Mantissa and exponent/: Represent a floating point number as pair of mantissa and an exponent
+        - Mantissa is between one and two (i.e 1 <= mantissa < 2)
+        - Exponent is in the range, -1022 to +1023
+- In python to display something, it uses the built-in function repr (i.e repr())
+  - *Representation*: (repr()) converts a number to a string and then display that string
+  - In *floats* it rounds it to seventeen (17) digits
+
+    e.g
+    #+BEGIN_SRC python
+    x = 0.1
+    x
+    #It will display 0.10000000000000001
+    #+END_SRC
+
+- *Successive approximation* has rough structure
+  #+BEGIN_EXAMPLE
+  guess = initial guess
+  for item in range(100):
+    if f(guess) close enough: return guess
+    else: guess = better guess
+  #+END_EXAMPLE
+
+- *Bisection method* is a root-finding method
