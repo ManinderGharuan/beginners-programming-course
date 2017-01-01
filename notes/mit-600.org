@@ -293,8 +293,8 @@ test[1:3]
 - It is an ordered sequence of characters
 - String also support selection and slicing
 * Lecture 4
-- *Decomposition*: is a way of putting structure onto the code (way of breaking the code up into modules
-- *Abstraction*: means to give names to things, so that name captures the core of what a function or whole program does
+- *Decomposition*: is a way of putting structure onto the code (way of breaking the code up into modules)
+- *Abstraction*: means to give names to things, so that name captures the core of what a function or whole program does (Abstraction is hiding details)
 
 - *Functions*: Function is a block of organized, reusable code that is used to perform a single, related action
   - It break up into modules
@@ -303,12 +303,12 @@ test[1:3]
 
   Syntax:
     - *def* is a keyword (Definition or define)
-      - It followed by name (This name is refer when we want to use this function)
-      - Function name is having open and close parenthesis with variable name inside it, i.e name(x)
-      - *Name(x)* defines formal parameters of function
+      - It followed by name (This name is referred when we want to use this function)
+      - Function name has open and close parenthesis with variable name inside it, i.e name(x)
+      - *name(x)* defines formal parameters of function
     - *Specification* is /what/ does this function do
     - *return* (keyword)
-    - Every possible path through code ends in a *return*
+    - Every possible path through code must end in a *return*
 
     e.g
     #+BEGIN_SRC python
@@ -330,12 +330,12 @@ test[1:3]
        #It will display 4
     #+END_SRC
 
-  - To call a function by passing in values for the parameters, i.e sqrt(16)
+  - To call a function, pass in values for parameters in parenthesis next to function's name, i.e sqrt(16)
     - It binds x to 16 (this binding is local, it only holds within the confines of the code of this procedure)
     - Inside the function block every bindings are local
     - *Local bindings*: do not affect global bindings
 
-- *Recursion*: is the process of defining a problem (or the solution to a problem) into nice sized chunks
+- *Recursion*: Break the problem into simpler version of same problem, plus some steps to add their solutions to make solution of the whole program
   - Base case: It is the simplest possible solution to the problem
   - Inductive step (or recursive step) break the problem into a simpler version of the same problem and some other steps
 
