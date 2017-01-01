@@ -204,10 +204,11 @@ while ans*ans < x:    #Setup end test or condition
 print ans             #Display 'ans' when done
 #+END_SRC
 
-Every looping construct always able to terminate and it does give a reasonable answer
+Every looping construct should always be able to terminate and it should give a reasonable answer
 
 ** Defensive programming
  - Make sure there is no syntax error or any infinite loop
+ - Always check user's input for mistakes
 
 e.g
 #+BEGIN_SRC python
@@ -223,7 +224,7 @@ else: print x, ' is a negative number'
 #+END_SRC
 
 ** Exhaustive enumeration
-- Try reasonable values until you find the solution
+- Try all reasonable values until you find the solution
 
   e.g
   #+BEGIN_SRC python
@@ -236,7 +237,7 @@ else: print x, ' is a negative number'
   #+END_SRC
 
 ** For loop
-- for loop is updating variable automatically
+- for loop updates the variable automatically
   - It allows to be sure that /For loop/ is going to terminate
 
   syntax
@@ -255,8 +256,8 @@ for i in range(1, x):   #It gives all integer from 1 up to x
 #+END_SRC
 
 ** Range
-- Range is build-in python function
-- It gives all the integer from lower to upper
+- Range is built-in python function
+- It gives all the integers from lower to upper
 
   e.g
   #+BEGIN_SRC python
@@ -267,7 +268,7 @@ for i in range(1, x):   #It gives all integer from 1 up to x
 ** Tuple
 - This is an ordered sequence of elements
 - It is immutable
-- Representation of tuple is square bracket, followed by a sequence of element, separated by commas and followed by a close square bracket
+- Representation of tuple is parenthesis (i.e round bracket), followed by a sequence of element, separated by commas and followed by a close parenthesis bracket
   e.g t = (1, 2, 3, 4)
 - *Selection* using to select the positions or index, e.g t[1]
 - *Slicing* using to pick up pieces, e.g t[1:3]
