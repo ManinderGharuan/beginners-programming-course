@@ -479,7 +479,7 @@ e.g
       # coding
     #+END_SRC
 
-  - *remove*: is the list method using to remove object from the list
+  - *remove*: is the list method used to remove object from the list
     - It takes two arguments list name and value which want to remove (e.g learn.remove('coding'))
       - It will search through the list until first time it finds value and then it will remove it from list
 * Lecture 7
