@@ -1,0 +1,45 @@
+* DONE Instructions
+CLOSED: [2017-01-02 Mon 13:23]
+- [X] Write doc-strings for all functions
+- [X] Write tests for all functions
+
+** Length
+- [X] Base case
+  - If list is empty return 0
+- [X] Recursive case
+  - Return 1 + length(list of one less)
+
+** Total
+- [X] Base case
+  - If list is empty return 0
+- [X] Recursive case
+  - Return zeroth item of list + length(list of one less)
+
+** Factorial
+- [X] Base case
+  - If number less than equal to 0 return 0
+- [X] Recursive case
+  - Return number * number - 1
+
+** Is Palindrome
+- [X] Base case
+  - If string is empty return True
+  - If string is having one character True
+- [X] Recursive case
+  - Return first item of string == last item of string and is_palindrome(string[1:-1])
+
+** Binary Search
+- [X] Base case
+  - If list is empty return False
+  - If middle of list equal to number return True
+- [X] Recursive case
+  - If middle of list less than number
+    - return binary_search(number, ls[:(length of list)/2])
+  - else: return binary_search(number, ls[(length of list)/2:])
+
+** Fibonacci
+- [X] Base case
+  - If number is 0 return 0
+  - If number is 1 return 1
+- [X] Recursive case
+  - fibonacci(n-2) + fibonacci(n-1)
