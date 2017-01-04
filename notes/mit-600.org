@@ -528,3 +528,16 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 - Map a problem into class of algorithms
 - There is two things we want to measure: Space and time
   - Space is how much memory need to complete a computation
+* Lecture 8
+- Canonical algorithms and different class of complexity
+- Iterative exponentiation
+- Rate of growth as the size of the of problem growth
+  - *Asymptotic notation*: are languages that allow us to analyze an algorithm's running time by identifying its behavior as input size for the algorithm increases (Also known as algorithm's growth rate)
+  - *Big oh notation*: Upper limit to the growth of a function as the input gets large
+    e.g: f of x is in big oh of n squared ( i.e f(x)eOn2 ) It says that function, f of x, is bounded above, there is upper limit on it, that growth no faster than quadratic in n squared
+- *Linear algorithm* tend to be things where, at one pass-through, to reduce the problem by constant amount, by one
+- *Log algorithm* typically is one where you cut the size of the problem down by some multiplicative factor
+- These are orders of growth (e.g A quadratic algorithm could run faster than a linear algorithm, It depends on what the input is or what the particular cases are)
+** Summary
+- Recognize different classes of algorithm
+- We have seen log, linear, quadratic, exponential
