@@ -1,0 +1,5 @@
+* Assignment 1
+- Print sum of the logarithms of all prime numbers b/w 1 and ~n~
+  - Create a list of logarithms of prime numbers b/w 1 and ~n~
+  - Sum all numbers in the list
+- Find ratio of prime_log_sum and ~n~
