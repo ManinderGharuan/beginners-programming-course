@@ -3,3 +3,37 @@
   - Create a list of logarithms of prime numbers b/w 1 and ~n~
   - Sum all numbers in the list
 - Find ratio of prime_log_sum and ~n~
+* Assignment 2
+** Problem 3
+- *is_possible (num: Integer)*
+  - Returns True if it is possible to make combination of 6, 9 and 20 which is equal to ~number~
+
+    #+BEGIN_SRC python
+    for a in range(0, number):
+      for b in range(0, number):
+        for c in range(0, number):
+          if (6*a + 9*b + 20*c) == number: return True
+
+    return False
+    #+END_SRC
+
+- *max_impossible (num: Integer)*
+  - Returns Last ~number~ which cannot possible to make combination of 6, 9 and 20
+  - Start checking from 0 to ~number~
+    - if ~number~ is_possible then count with 1
+    - if ~number~ is not possible then reset count and not_possible = ~number~
+    - if count is equal to 6 return not_possible val
+
+    #+BEGIN_SRC python
+    count = 0
+    not_possible = 0
+      for i in range(num):
+          if is_possible(i):
+              count += 1
+          else:
+              count = 0
+              not_possible = i
+
+          if count == 6
+              return not_possible
+    #+END_SRC
