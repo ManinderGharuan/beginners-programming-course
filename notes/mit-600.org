@@ -485,25 +485,18 @@ e.g
 * Lecture 7
 ** List
 - We have done two methods *append* and *remove*
-- We can also assign to a list or to an element of list (e.g ls[1] = 44
+- *Assign to a list*
+  - We can also assign to a list or to an element of list (e.g ls[1] = 44
 
-  e.g
-  #+BEGIN_SRC python
-    ls = ['element', 'number', 5, 4, 'anything']
-    ls[3] = 'replaced'  #ls[3], 3 is index of list
-    #Now new list `ls` is ['element', 'number', 5, 'replaced', 'anything']
-  #+END_SRC
-
-  We cannot assign out of range index
-
-  e.g
-  #+BEGIN_SRC python
-    ls = ['length', 'of', 'list', 'is', 4]
-    ls[5] = 'unknown_index'  #Error because index 5 is not available in list
-  #+END_SRC
+    e.g
+    #+BEGIN_SRC python
+      ls = ['element', 'number', 5, 4, 'anything']
+      ls[3] = 'replaced'  #ls[3], 3 is index of list
+      #Now new list `ls` is ['element', 'number', 5, 'replaced', 'anything']
+    #+END_SRC
 
 ** Dictionaries
-- Dictionaries are also /mutable/ and /heterogeneous/ like lists are (but elements in lists do not have an order)
+- Dictionaries are also /mutable/ and /heterogeneous/ like lists are (but elements in lists have an order, dictionary don't)
 - Every element of a dictionary as a key value pair(i.e <key>: <value>), where the keys are used as indices
 
 e.g
@@ -511,23 +504,16 @@ e.g
 dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 #+END_SRC
 
-- Dictionaries are implemented using a magic technique called *Hashing*
+- Dictionaries are implemented using a technique called *Hashing*
   - It allows us to retrieve keys in constant time
 
 ** Pseudo code
 - Pseudo is description of steps, but not in a particular programming language
-- Input value for base as float
-- Input value for height as float
-- Find square-root of b*b + h*h
-  - Save as float in hypotenuse
-- Print out using value in hypotenuse
 
 ** Efficiency
 - Orders of growth
 - Choice of algorithm
-- Map a problem into class of algorithms
-- There is two things we want to measure: Space and time
-  - Space is how much memory need to complete a computation
+
 * Lecture 8
 - Canonical algorithms and different class of complexity
 - Iterative exponentiation
