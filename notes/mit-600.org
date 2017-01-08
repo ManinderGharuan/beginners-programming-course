@@ -528,49 +528,33 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 - Recognize different classes of algorithm
 - We have seen log, linear, quadratic, exponential
 * Lecture 9
-- There are shorting algorithms: *Selection sort*, *Bubble sort*
+- There are sorting algorithms: *Selection sort*, *Bubble sort*
 ** Selection Sort
-- First find the smallest element in the array and exchanges (or swap) it with the element in the first position
-  - Then find second smallest element and exchange it with the element in the second position, and continues until the list is sorted
-- Selection sort sorting list number of element - 1 (n-1) times
+*** Algorithm
+- Search smallest element in list
+- Swap searched element with index 0 of list
+- Search second smallest element
+- Swap searched element with index 1 of list
+- Repeat same steps while index equal to length of list - 1
+*** Pseudo code
+- [X] Base case
+  - If length of list <= 1: return ls
+- [X] Recursive case
+  - min_index = get_min_index(ls)
+  - list[0], list[min_index] = list[min_index], list[0]
+  - Return [list[0]] + selection_sort(ls[1:])
 
-e.g
-#+BEGIN_EXAMPLE
-Unshorted list = [5, 2, 7, 8, 6]
-Now search for smallest element and exchange it with first element
 
-After that new list is = [2, 5, 7, 8, 6]
-Now again search for second smallest element and exchange it with second element
-
-After that new list is = [2, 5, 7, 8, 6]
-There is no change because element in second no is already sorted
-
-Now do same for third smallest element
-
-New list = [2, 5, 6, 8, 7]
-
-Again same step
-After that new shorted list is [2, 5, 6, 7, 8]
-
-Hence list is shorted
-#+END_EXAMPLE
 ** Bubble Sort
-- It compare each pair of adjacent items and swapping them if they are in wrong order
-  - Passing procedure is repeated until no swap are required
-
-e.g
-#+BEGIN_EXAMPLE
-Unshorted list = [5, 2, 7, 8, 6]
-
-It checks first two element (5 and 2) and if needed to short then swap them (e.g [2, 5, 7, 8, 6]
-Now again check second element and third element (5, 7) if needed swap them
-
-When all passes done new list is = [2, 5, 7, 6, 8]
-
-Now step 2 again starting from first two element until all passes done
-
-Step 2 list = [2, 5, 6, 7, 8]
-
-Now list is sorted but there are n-1 steps, so there are 5-1 = 4 steps
-After all steps list will be sorted
-#+END_EXAMPLE
+*** Algorithm
+- Start comparing from first two elements
+- If first element is greater than second element swap first with second
+  - Repeat this for all items of list
+- Repeat above steps until there are no swaps to do
+*** Pseudo code
+- [X] Base case
+  - if not have_changed: return list
+  - if len(list) <= 1: return list
+  - for i in range(len(ls)-1):if ith element less than ith + 1 element swap them
+- [X] Recursive case
+  - bubble_sort(ls, have_changed)
