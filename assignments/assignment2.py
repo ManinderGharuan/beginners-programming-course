@@ -1,6 +1,6 @@
 def is_possible(num, i=6, j=9, k=20):
-    """Returns True if it is possible to make combination of 6, 9 and 20 which
-       is equal to ~number~"""
+    """Returns True if it is possible to make combination of i, j and k which
+       is equal to num"""
 
     for a in range(num):
         for b in range(num):
@@ -12,8 +12,8 @@ def is_possible(num, i=6, j=9, k=20):
 
 
 def max_impossible(num, i=6, j=9, k=20):
-    """Returns Last ~number~ which cannot possible to make combination of 6, 9
-       and 20"""
+    """Returns Last num which cannot possible to make combination of i, k
+       and k"""
     count = 0
     not_possible = 0
 
