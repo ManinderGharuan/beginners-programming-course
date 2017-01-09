@@ -37,3 +37,51 @@
           if count == 6
               return not_possible
     #+END_SRC
+* Assignment 3
+** Problem 1
+- *countSubStringMatch (target: String, key: String)*
+  - Takes ~target~ and find how many times ~key~ repeated in ~target~
+  - Start finding ~key~ inside ~target~
+    - When one time ~key~ found then count with 1
+  - Repeat step 1 but start finding from index where previous ~key~ found
+
+  #+BEGIN_SRC python
+    count = 0
+    index = 0
+
+    while find(target, key, index) != -1:
+        count += 1
+        index = find(target, key, index) + 1
+
+    return count
+  #+END_SRC
+
+- *countSubStringMatchRecursive (target: string, key: string)*
+  - Takes ~target~ and find how many times ~key~ repeated in ~target~
+  - *Base case*
+    - if find(target, key) == -1: return 0
+  - *Recursive case*
+    - return 1 + countSubStringMatchRecursive(target[find(target, key)+1:], key)
+** Problem 2
+- *subStringMatchExact (target: string, key: string)*
+  - Returns tuple of starting indexes of ~key~ in ~target~
+  - Start finding ~key~ index in ~target~
+    - When first time ~key~ index found then save index in tuple
+  - Repeat step 1 but start finding from index where previous ~key~ found
+** Problem 3
+- *constrainedMatchPair (firstMatch: tuple, secondMatch: tuple, length: length of firstMatch)*
+  - Return tuple of possible match of ~firstMatch~ + ~length~ + 1 is equal to ~secondMatch~
+  - Check every item of ~firstMatch~ + ~length~ + 1 is equal to any item in ~secondMatch~
+    - If it is True return that item in tuple
+** Problem 4
+- *subStringMatchExactlyOneSub (target :string, key :string)*
+  Returns tuple of starting indexes of ~key~ in ~target~ where ~key~ is having one element substituted in ~target~
+
+  - Take all possible combinations of ~key~ as ~all_key_combinations~
+  - Convert each ~pair~ in ~all_key_combinations~ from string to index
+    #+BEGIN_SRC python
+    pair = (subStringMatchExact(target, pair[0]), subStringMatchExact(target, pair[1]))
+    #+END_SRC
+  - Find only ~matching_pairs~ from ~all_key_combinations~ using
+    ~constrainedMatchPair(pair[0], pair[1], len(pair[0])~
+  - Add and return all ~matching_pairs~
