@@ -48,14 +48,7 @@ def getAllCombination(key):
     list_of_comb = []
 
     for i in range(len(key)):
-        if i == 0:
-            list_of_comb.append(('', key[1:]))
-
-        if i > 0 and i < len(key):
-            list_of_comb.append((key[0:i], key[i+1:]))
-
-        if i == len(key):
-            list_of_comb.append((key[:len(key)-1], ''))
+        list_of_comb.append((key[:i], key[i+1:]))
 
     return list_of_comb
 
