@@ -85,3 +85,25 @@
   - Find only ~matching_pairs~ from ~all_key_combinations~ using
     ~constrainedMatchPair(pair[0], pair[1], len(pair[0])~
   - Add and return all ~matching_pairs~
+* Assignment 4
+** Problem 1
+- *nestEggFixed (salary :Integer, save :percentage, growthRate :percentage, years :Integer)*
+  Returns list of size of your retirement account at the end of each year
+
+  - From first year to ~years~
+    - If first year then do ~salary~ * ~save~ * 0.01
+      - Save it in ~account_list~
+    - otherwise last index of ~account_list~ * (1 + 0.01 * growthRate) + salary * save * 0.01
+      - Save it in ~account_list~
+  - Return ~account_list~
+** Problem 3
+- *postRetirement (savings :Integer, growthRates :list, expenses :integer)*
+  Returns list of fund size after each year of retirement
+
+- From 0 to length of ~growthRates~
+  - If index of ~growthRates~ 0
+    - Do (~savings~ * (1 + 0.01 * ~growthRates~[i]) - ~expenses~
+      - Save it in ~fund~ list
+  - Otherwise last index of ~fund~ * (1 + 0.01 * ~growthRates~[i]) - ~expenses~
+    - Save it in ~fund~ list
+- Return ~fund~
