@@ -107,3 +107,42 @@
   - Otherwise last index of ~fund~ * (1 + 0.01 * ~growthRates~[i]) - ~expenses~
     - Save it in ~fund~ list
 - Return ~fund~
+* Assignment 5
+** Problem 1
+- *get_word_score (word :String, n :Integer)*
+  Returns score for a ~word~, if word is valid
+
+  - Check that word is valid or not
+    - Take every word from ~words.txt~ file and check that is there ~word~ is available
+  - For valid word
+    - Check every word score and add them if length of ~word~ greater then equal to ~n~ add additional scores also
+** Problem 2
+- *update_hand (hand :Dictionary, word :String)*
+  Returns remaining dictionary of ~hand~ with removing ~word~
+
+  - Take key from ~word~
+    - find key in ~hand~, update value by minus 1 and save it in ~update hand~
+** Problem 3
+- *is_valid_word (word :String, hand :Dictionary, word_list :List)*
+  Returns True if ~word~ is in the ~word_list~ and ~hand~ is having letters of ~word~, False otherwise
+
+  - Check ~word~ is available in ~word_list~
+    - If available then check ~hand~ is having all letters of ~word~
+      - If having then return True
+** Problem 4
+- *play_hand (hand :Dictionary, word_list :List of Strings)*
+  Allow the user to play the given ~hand~
+
+  - Take ramdom ~hand~ and display on screen
+  - Ask user to enter a ~word~ from ~hand~
+    - If the ~word~ is valid then display earned points and total points
+    - If ~word~ invalid reject that and ask user to enter again
+** Problem 5
+- *play_game (word_list :list)*
+  Allow the user to play an arbitrary number of hands
+
+  - Take input 'n' for new game or 'r' for retry or 'e' for exit from user
+    - For input 'n', give ramdom ~hand~ to ~play_hand~
+    - For input 'r', given again same ~hand~ to ~play_hand~
+    - For input 'e', exit the game
+    - For invalid input, ask user again
