@@ -16,8 +16,8 @@ def load_words():
     return wordlist
 
 
-def is_word_begins_valid(word, word_list):
-    """Returns True if word is begins, False otherwise"""
+def is_valid_word(word, word_list):
+    """Returns True if `word` is a valid word in `word_list`, False otherwise"""
     word_ls = get_valid_words()
 
     for letter in word_ls:
@@ -25,87 +25,81 @@ def is_word_begins_valid(word, word_list):
             return True
 
 
-def change_current_player(player):
-    """Returns player number whose turn"""
-    current_player = player
-
-    if current_player == 1:
-        current_player += 1
-    else:
-        current_player -= 1
-
-    return current_player
+def next_player(player):
+    return 2 if player == 1 else 1
 
 
 def ghost():
-    """Start Ghost game between two players"""
+    """Start Ghost game"""
     word_list = load_words()
-    current_word_fregment = ''
+    current_word_fragment = ''
     current_player = 1
     print("Welcome to Ghost!")
     print("Player {} goes first." .format(current_player))
 
     while True:
-        if current_word_fregment == '':
-            print("Current word fregment: '{}'" .format(current_word_fregment))
+        if current_word_fragment == '':
+            print("Current word fragment: '{}'" .format(current_word_fragment))
 
             word = input("Player {} says letter: " .format(current_player)).lower()
 
             if word in string.ascii_letters and len(word) == 1:
-                current_word_fregment += str(word)
-                current_player = change_current_player(current_player)
+                current_word_fragment += str(word)
+                current_player = next_player(current_player)
             else:
                 print("Invalid letter! word should be one letter and string")
                 print("Please try again")
         else:
-            if len(current_word_fregment) < 3:
-                print("Current word fregment: '{}'" .format(current_word_fregment))
+            if len(current_word_fragment) < 3:
+                print("Current word fragment: '{}'" .format(current_word_fragment))
                 print("Player {}'s turn." .format(current_player))
 
                 word = input("Player {} says letter: " .format(current_player)).lower()
 
                 if word in string.ascii_letters and len(word) == 1:
-                    current_word_fregment += str(word)
+                    current_word_fragment += str(word)
 
-                    current_player = change_current_player(current_player)
+                    current_player = next_player(current_player)
                 else:
                     print("Invalid letter! word should be one letter and string")
                     print("Please try again")
             else:
-                print("Current word fregment: '{}'" .format(current_word_fregment))
+                print("Current word fragment: '{}'" .format(current_word_fragment))
 
-                if current_word_fregment in get_valid_words():
-                    current_player = change_current_player(current_player)
+                if current_word_fragment in get_valid_words():
+                    current_player = next_player(current_player)
 
                     print("Player {} loses because '{}' is a word"
-                          .format(current_player, current_word_fregment))
+                          .format(current_player, current_word_fragment))
 
-                    current_player = change_current_player(current_player)
+                    current_player = next_player(current_player)
 
                     print("Player {} wins!" .format(current_player))
                     return
 
-                if is_word_begins_valid(current_word_fregment, get_valid_words()):
+                if is_valid_word(current_word_fragment, get_valid_words()):
                     print("Player {}'s turn." .format(current_player))
 
                     word = input("Player {} says letter: " .format(current_player)).lower()
 
                     if word in string.ascii_letters and len(word) == 1:
-                        current_word_fregment += str(word)
+                        current_word_fragment += str(word)
 
-                        current_player = change_current_player(current_player)
+                        current_player = next_player(current_player)
                     else:
                         print("Invalid letter! word should be one letter and string")
                         print("Please try again")
-
                 else:
-                    current_player = change_current_player(current_player)
+                    current_player = next_player(current_player)
 
                     print("Player {} loses because no word begins with '{}'!"
-                          .format(current_player, current_word_fregment))
+                          .format(current_player, current_word_fragment))
 
-                    current_player = change_current_player(current_player)
+                    current_player = next_player(current_player)
 
                     print("Player {} wins!" .format(current_player))
 
                     return
+
+if __name__ == '__main__':
+    ghost()

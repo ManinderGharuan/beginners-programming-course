@@ -101,14 +101,12 @@ def is_valid_word(word, hand, word_list):
 
                 if temp_hand.get(key) == 0:
                     temp_hand.pop(key)
-
         else:
             valid_hand = False
             break
 
     if valid_word and valid_hand:
         return True
-
     else:
         return False
 
@@ -135,7 +133,6 @@ def play_hand(hand, word_list):
 
             print(word, " earned ", score, " points. Total: ", points, " points")
             new_hand = update_hand(new_hand, word)
-
         else:
             print("Invalid word, Please try again.")
 
