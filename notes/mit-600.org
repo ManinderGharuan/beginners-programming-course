@@ -558,3 +558,38 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
   - for i in range(len(ls)-1):if ith element less than ith + 1 element swap them
 - [X] Recursive case
   - bubble_sort(ls, have_changed)
+* Lecture 10
+** Divide and Conquer
+- Binary search is the example of divide and conquer algorithm
+- It split the problem into saveral sub-problems of the same type
+  - Each of sub-problems solve independently and them combine those solutions
+** Merge Sort
+- Merge sort is the old algorithm invented in 1945 by John Von Neuman
+- It is the sorting technique based on divide and conquer
+- *Merge short algorithm*
+  - Divide the list in half
+    - Keep dividing each of those lists in half (Continue until we have singleton lists)
+  - Then combine them by doing emerge the sub-lists
+** Exceptions
+  - *try/except block*: This try to execute instructions
+    - If it can succesfully execute instructions than it will skip the except block
+    - If raises an exception than except block will run
+* Lecture 11
+** Validation
+- Validation is a process to uncover problems and increase confidence
+- It is combination of *testing* and *reasoning*
+
+** Testing
+- Compare input output pair to a specification
+- Two classes of testing /unit testing/ and /integration testing/
+  - *Unit testing*: Validate each piece of program independently
+  - *Integration testing*: check the overall program is working
+
+** Debugging
+- Debugging is the process of ascertaining why the program is not working
+- Study the events that led to an error
+- There are two aspects /function/ and /performance/
+- /Print statement/ and /reading/ are best tools to debugging
+
+** Defensive Programming
+- Writing your program in such way that it facilitate both validation and debugging
