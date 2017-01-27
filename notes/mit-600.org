@@ -593,3 +593,39 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 
 ** Defensive Programming
 - Writing your program in such way that it facilitate both validation and debugging
+* Lecture 12
+** Debugging
+- Things should be look at when looking for bugs
+  - Reversed order of arguments
+  - Spelling
+  - Initialization
+  - Object vs value equality
+  - Aliasing: Deep vs shallow copy
+  - Side effects
+
+** Optimization Problems
+- Function to maximize or minimize
+- Set of constraints
+
+*** Classic Optimization Problems
+- Shortest path problem
+- Traveling sales person
+- Bin packing
+- Sequence of alignment problems
+- Knapsack problem
+- Problem reduction
+
+** Knapsack Problem
+- Given set of things more than fit into the knapsack and trying to decide which thing to take and which thing to leave
+- *0/1 knapsack problem*
+  - We have n items and at every step we have to take all items or none of the item
+    - Each item has weight and value and try to optimize
+
+** Problem Reduction
+- Given some problems to solve, that never seen before
+  - Find is it an instance of some problem that already solved
+  - We take new problem and map it into an old problem so we can use old solution
+
+** Dynamic Programming
+- Invented by mathematician called Bellman
+- Overlapping sub-problems: /optimal sub-structure/
