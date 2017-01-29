@@ -1,4 +1,4 @@
-from algorithms import get_min_index, selection_sort, bubble_sort
+from algorithms import get_min_index, selection_sort, bubble_sort, merge_sort
 
 
 def test_get_min_index():
@@ -21,3 +21,12 @@ def test_bubble_sort():
     assert bubble_sort([2]) == [2]
     assert bubble_sort([3, 5, 6, 7, 4, 2]) == sorted([3, 5, 6, 7, 4, 2])
     assert bubble_sort([7, 4, 5, 3, 2, 6]) == sorted([7, 4, 5, 3, 2, 6])
+
+
+def test_merge_sort():
+    assert merge_sort([]) == []
+    assert merge_sort([2]) == [2]
+    assert merge_sort([3, 5, 6, 7, 4, 2]) == [2, 3, 4, 5, 6, 7]
+    assert merge_sort([7, 4, 5, 3, 2, 6]) == [2, 3, 4, 5, 6, 7]
+    assert merge_sort([3, 7, 9, 1, 5, 7, 8, 2]) == sorted([3, 7, 9, 1, 5,
+                                                           7, 8, 2])
