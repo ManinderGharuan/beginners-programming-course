@@ -48,7 +48,7 @@ def merge(left, right):
     merge_list = []
     i, j = 0, 0
 
-    while len(left) + 1 > i:
+    while True:
         if j == len(right):
             merge_list.extend(left[i:])
             break
