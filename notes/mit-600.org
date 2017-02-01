@@ -481,7 +481,7 @@ e.g
 
   - *remove*: is the list method used to remove object from the list
     - It takes two arguments list name and value which want to remove (e.g learn.remove('coding'))
-      - It will search through the list until first time it finds value and then it will remove it from list
+      - It will search through the list until first time it finds value and then it will remove it from li
 * Lecture 7
 ** List
 - We have done two methods *append* and *remove*
@@ -629,3 +629,32 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 ** Dynamic Programming
 - Invented by mathematician called Bellman
 - Overlapping sub-problems: /optimal sub-structure/
+
+* Lecture 13
+** Dynamic Programming
+- *Overlapping sub-problems*
+  - /Memoization/: store result when first time it computed
+    - Then look it up the sub-sequent time we need it
+
+    e.g
+    #+BEGIN_SRC python
+      def fastFib(n, memo):
+          global numCalls
+          numCalls += 1
+
+          print("fib1 called with ", n)
+
+          if not(n) in memo:
+              memo[n] = fastFib(n-1, memo) + fastFib(n-2, memo)
+
+          return memo[n]
+
+
+      def fib1(n):
+          memo = {0: 1, 1: 1}
+
+          return fastFib(n, memo)
+    #+END_SRC
+
+- *Optimal Substructure*
+  - Global optimal solution can be constructed from optimal solutions to sub problems
