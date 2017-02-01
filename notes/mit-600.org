@@ -658,3 +658,27 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 
 - *Optimal Substructure*
   - Global optimal solution can be constructed from optimal solutions to sub problems
+* Lecture 14
+- *Dynamic Programming* trades time for space
+  - Do not intimidated by exponential problems
+  - Dynamic programming is broadly useful
+  - Problem reduction
+
+- *Module*
+  - Collection of a related functions
+  - Refer to a function using dot notation (e.g math.sqrt(number))
+
+- *Classes*
+  - *Object-oriented programming*
+    - *Object*: collection of data and functions
+      - Pass object to another program, that program can also perform operations on the object
+    - Generating user-defined types
+    - *Class*: Collection of objects
+      - All the built-in types are built-in classes
+
+- *Data abstraction*
+  - Abstract data-types
+
+- *Message passing metaphor*
+  - One object can pass message to another object
+    - Another object responds by executing methods on object (e.g list.sort())
