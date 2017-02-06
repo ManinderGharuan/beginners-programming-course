@@ -682,3 +682,22 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 - *Message passing metaphor*
   - One object can pass message to another object
     - Another object responds by executing methods on object (e.g list.sort())
+* Lecture 15
+- *Abstract data type*
+  - Giving ability to create data types same way we have some built-in (i.e int, float, str)
+
+** Class
+- Template for creating instances of an object
+- Instance has some internal attributes
+- *__init__*: when call the class definition init will apply on arguments
+  - Creates an instance
+  - Use ~self~ to refer instance
+- *Data hiding*: one can only access instance values through defined methods (/python does not do this/)
+
+** Methods of classes
+- __init__
+- __str__: printed representation
+- __cmp__: comparison
+- __eq__: same
+
+** Operator Overloading
