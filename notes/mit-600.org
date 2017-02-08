@@ -701,3 +701,58 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 - __eq__: same
 
 ** Operator Overloading
+* Lecture 16
+** Inheritance
+- Another class that takes all functions from parent class
+- Allow us to add more
+
+e.g
+#+BEGIN_SRC python
+  class Person(object):
+      def __init__(self, family_name, first_name):
+          self.family_name = family_name
+          self.first_name = first_name
+
+      def familyName(self):
+          return self.family_name
+
+      def firstName(self):
+          return self.first_name
+
+      def __cmp__(self, other):
+          return cmp((self.family_name, self.first_name),
+                     other.family_name, other.first_name)
+
+      def __str__(self):
+          return "<Person is: {} {}>" .format(self.first_name, self.family_name)
+
+      def say(self, toWhom, something):
+          return self.first_name + ' ' + self.family_name + ' says to ' + toWhom.firstName() + ' '
+
+      def sing(self, toWhom, something):
+          return self.say(toWhom, something + ' tra la la')
+
+
+  class MITPerson(Person):
+      nextIdNum = 0
+
+      def __init__(self, family_name, first_name):
+          Person.__init__(self, family_name, first_name)
+          self.idNum = MITPerson.nextIdNum
+          MITPerson.nextIdNum += 1
+
+      def getIdNum(self):
+          return self.idNum
+
+      def __str__(self):
+          return "<Person is: {} {}" .format(self.first_name, self.family_name)
+
+      def __cmp__(self, other):
+          return cmp(self.idNum, other.idNum)
+#+END_SRC
+
+- New class is called derived (or child) class and from which it inherit is called base (or parent) class
+
+** Shadowing
+- Overriding
+- Implementation in the subclass overrides (replaces) implementation in the super class by providing a method that has same name and same return type as method in parent class
