@@ -695,12 +695,14 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 - *Data hiding*: one can only access instance values through defined methods (/python does not do this/)
 
 ** Methods of classes
-- __init__
+- __init_: runs when object of a class is created_
 - __str__: printed representation
-- __cmp__: comparison
-- __eq__: same
+- __cmp__: use to compare values
+- __eq__: checking equality
 
 ** Operator Overloading
+- Same operators to have different meaning according to context
+
 * Lecture 16
 ** Inheritance
 - Another class that takes all functions from parent class
