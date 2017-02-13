@@ -705,8 +705,7 @@ dic = {'name': 'john', 'lecture': 7, 'course': 'MIT', 1: 'one'}
 
 * Lecture 16
 ** Inheritance
-- Another class that takes all functions from parent class
-- Allow us to add more
+- Inherit attributes and behavior methods from another class
 
 e.g
 #+BEGIN_SRC python
@@ -756,5 +755,6 @@ e.g
 - New class is called derived (or child) class and from which it inherit is called base (or parent) class
 
 ** Shadowing
+- Occurs when a variable declared with inner class has same name as a variable declared in outer class
 - Overriding
 - Implementation in the subclass overrides (replaces) implementation in the super class by providing a method that has same name and same return type as method in parent class
