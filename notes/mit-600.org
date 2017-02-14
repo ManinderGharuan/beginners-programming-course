@@ -758,3 +758,29 @@ e.g
 - Occurs when a variable declared with inner class has same name as a variable declared in outer class
 - Overriding
 - Implementation in the subclass overrides (replaces) implementation in the super class by providing a method that has same name and same return type as method in parent class
+
+* Lecture 17
+- *Informal problem description to rigorous problem statement*: First understand problem then move on to the code
+  - Be careful about what question you asking and every time they may have different answers
+
+- *Computational models*: Some programs are modeling actual world
+  - If writing a program to try and help us decide what stocks to buy or sell, then we try to model the stock market in some sense
+  - In every problem we build a software and hope that it has same ability to actual situation
+
+- *Exploiting randomness*: In world there is one the sad things or happy things
+  - Things happen in either at random or seemingly at random
+  - We have to assume that they really are random
+  - Building model of weather that assume a certain amount of randomness in it
+
+- *Making sense of data*: Building model of what the customers might buy,
+  - That model going to take entire history of what customer's have brought in the past
+  - So this have lot of data about what's happened in past
+
+- *Evaluating quality of answers*: How do you go about looking at results,
+  - And deciding whether to believe them or not
+
+- *Simulate random walk*: Try and build model that is showing it is the real world and simulate what's going on and random walk
+  - Random walks are very general, are used to address lot of real problems
+
+- *Default values*: Python allows us default values of parameters
+  - If call a method without last argument, rather than getting an error it chooses the default value
