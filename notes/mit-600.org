@@ -784,3 +784,16 @@ e.g
 
 - *Default values*: Python allows us default values of parameters
   - If call a method without last argument, rather than getting an error it chooses the default value
+* Lecture 18
+- *Brownian Motion*: Random motion of particles suspended in a fluid (i.e liquid or gas) resulting from there collision with fast moving atoms in liquid
+  - It use to model the path traced by a molecule as it travels in a liquid or a gas
+  - Used in biology to do things like model kinetics
+
+- *Pylab*: Designed to provide a python interface to a lot of functionality you get in /Matlab/
+  - Produces all beautiful plots and then does not display them until type *show*
+    - At the end of every program, last thing to execute should be /show/
+    - If /show/ written in middle of program it stops rest of the code (it will not execute next line)
+
+- *Numpy*: Gives lot of operations on numbers, numbered things
+  - Extension to python, adding support for large, multi-dimensional arrays, along with large library of high-level mathematician functions
+  - Most programming language /arrays/ meaning different, In Numpy *Array* is called matrix
