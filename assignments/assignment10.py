@@ -1,7 +1,6 @@
 # Backend code for PS10
 
 import random
-import string
 
 # Global Constants
 VOWELS = 'aeiou'
@@ -31,7 +30,8 @@ def getFrequencyDict(sequence):
     for x in sequence:
         freq[x] = freq.get(x, 0) + 1
 
-    del freq[' ']
+    if ' ' in freq:
+        del freq[' ']
 
     return freq
 
@@ -260,17 +260,16 @@ class ComputerPlayer(Player):
         the wordlist
         """
         hand = getFrequencyDict(str(self.getHand()))
-        words = []
-        words_score = {}
+        best_word = {}
 
         for word in wordlist:
             if Hand(HAND_SIZE, hand).containsLetters(word):
-                words.append(word)
+                best_word[word] = getWordScore(word)
 
-        for word in words:
-            words_score[word] = len(word)
+        if best_word == {}:
+            return "."
 
-        return max(words_score, key=words_score.get)
+        return max(best_word, key=best_word.get)
 
     def playHand(self, callback, wordlist):
         """
