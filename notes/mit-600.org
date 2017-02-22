@@ -797,3 +797,23 @@ e.g
 - *Numpy*: Gives lot of operations on numbers, numbered things
   - Extension to python, adding support for large, multi-dimensional arrays, along with large library of high-level mathematician functions
   - Most programming language /arrays/ meaning different, In Numpy *Array* is called matrix
+* Lecture 19
+- *Biased random walks*: is a time path process in which an evolving variable jumps from current state to one of various potential new states
+  - Unlike in a pure random walk, the probabilities of the potential new states are unequal
+
+- *Polymorphism*: is based on greek words poly (many) and morphism (forms)
+  - This is a provision of a single interface to entities of different types
+
+- *Distribution of data*: is a listing or function showing all the possible values of data and how often they accurs
+  - Distribution of numerical data is organized, they are ordered from smallest to largest, broken into reasonably sized groups and put into graph
+
+- *Simulation*: grew hand in hand with the development of the computers from very beginning
+  - Simulation has become a useful part of mathematical modeling systems in physics
+  - It can be used to explore and gain new insights into new technology
+    - and to estimate performance of systems too complex for analytical solutions
+  - It can be large-scale programs that run for hours or days on network-based groups of computers
+  - First development of computer simulation was /Manhattan Project/
+    - It was a research and development undertaking during World War 2 that produced the first nuclear weapons
+    - /Monte carlo simulation/: are broad class of computational algorithms that rely on repeated random sampling to obtain numerical results
+  - Use simulation when we really can't get a closed from analytic solution
+  - When we simulating anything, is we are attempting to generate a sample of representative scenarios
