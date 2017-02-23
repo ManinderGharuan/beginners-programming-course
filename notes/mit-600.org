@@ -817,3 +817,28 @@ e.g
     - /Monte carlo simulation/: are broad class of computational algorithms that rely on repeated random sampling to obtain numerical results
   - Use simulation when we really can't get a closed from analytic solution
   - When we simulating anything, is we are attempting to generate a sample of representative scenarios
+
+* Lecture 20
+** Different ways to classify simulation models
+- Stochastic or Deterministic
+  - /Stochastic/ is a simulation that traces evolution of variables that can change randomly with certain probabilities
+  - /Deterministic/ simulation contain no random variables and no degree of randomness (get same result every time)
+
+- Static vs Dynamic
+  - In /Dynamic/ situation time plays a role
+  - In /Static/ situation there is no issue with time
+
+- Discrete vs Continuous
+  - /Discrete/ data can only take particular values
+    - There may an infinite number of those values
+  - /Continuous/ data are not restrict to defined separate values
+    - But value over a continuous
+
+** Monte Carlo Simulation
+- It is a computerized mathematical technique that allows to account for risk in quantitative analysis and decision making
+
+- *Inferential Statistics*: try to infer from the sample data what the population might think
+  - Inferential statistics to make inferences from our data to more general conditions
+
+- *Xrange()*: Same as range function but it does not use as much space
+  - It creates the values as you need them with a special technique /yielding/
