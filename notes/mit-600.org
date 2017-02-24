@@ -842,3 +842,23 @@ e.g
 
 - *Xrange()*: Same as range function but it does not use as much space
   - It creates the values as you need them with a special technique /yielding/
+
+* Lecture 21
+- *Spring Constant*: is a number that represents how much force it takes to stretch a material with larger spring constants are stiffer
+  - Some springs are not at all elastic, they are hard but break easily before they bend or stretch
+
+  - *Hooke's Law*: is a principle of physics that states that the force /F/ needed to compress or extend a spring by some distance /X/ is proportional to the distance
+    - That is F = kX
+      - Where k is a constant factor characteristic of the spring and X is small compared to total possible deformation
+
+- *Objective Function*: is an equation to be optimized given certain constraints and with variables that need to be minimized or maximized using nonlinear programming techniques
+
+  - *Least Squares*: is a standard approach in regression analysis to the approximate solution of over-determined systems
+    - The overall solution minimizes the sum of the squares of the errors made in the results of every single equation
+
+- *Polyfit*: is build-in function of /pylab/
+  - Given some points, finds the polynomial that gives best least squares approximation to those points
+
+- *Linear Regression*: is an approach for modeling the relationship between a scalar dependent variable y and one or more explanatory variables (or independent variables) denoted X
+
+- *Lurking Variable*: is a variable that is not included as an response variable in the analysis but can affect the interpretation of relationships between variables
