@@ -862,3 +862,30 @@ e.g
 - *Linear Regression*: is an approach for modeling the relationship between a scalar dependent variable y and one or more explanatory variables (or independent variables) denoted X
 
 - *Lurking Variable*: is a variable that is not included as an response variable in the analysis but can affect the interpretation of relationships between variables
+* Lecture 22
+** Distributions
+- *Normal*: (Gaussian distribution) is very common continuous probability distribution
+  - Are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known
+  - Sometimes it called the *bell curve*, however many other distributions are bell-shaped
+
+  - It can be describe with two numbers
+    - *Mean*: in /mathematics/, it has several different definitions depending on the context
+      - In probability and statistics, mean and expected value are used synonymously to refer to one measure of random variable characterized
+
+    - *Standard deviation*: is used to quantify the amount of variation of dispersion of a set of data values
+
+  - *Stable Distribution*: A random variable is said to be stable if a linear combination of two independent copies of random sample has same up to location and scale parameters
+
+- *Uniform*: is a family of symmetric probability distributions
+  - Such that for each member of the family, all intervals of the same length on the distribution's support are equally probable
+  - Support is defined by two parameters, a and b, which are its minimum and maximum values
+
+- *Exponential*: describes the time between events in a poisson process
+  - A process in which events accur continuously and independently at a constant average rate
+
+** Misuse of data
+- Statistics are supposed to make something easier to understand but when used in a misleading fashion can trick the casual observer into believing something other than what the data shows
+- It accurs when a statistical argument asserts a falsehood
+- In some case, the misuse may be accidental
+- Misuses can be easy to fall into
+  - Professional scientists, even mathematician and professional statisticians, can be fooled by even some simple methods, even if they are careful to check everything
