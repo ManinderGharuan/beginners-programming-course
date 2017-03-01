@@ -889,3 +889,40 @@ e.g
 - In some case, the misuse may be accidental
 - Misuses can be easy to fall into
   - Professional scientists, even mathematician and professional statisticians, can be fooled by even some simple methods, even if they are careful to check everything
+
+* Lecture 23
+- *Texas sharpshooter fallacy*: is an informal fallacy which is committed when differences in data are ignored, but similarities are stressed
+  - Name comes from a joke about a *Texan* who fires some gunshots at the side of a barn,
+    - then paints a target centered on tightest cluster of hits and claims to be a sharpshooter
+
+- *Indexed portfolios*: want to own all of the stocks, just betting market as a whole without thinking I can pick winners and losers
+  - If the stock market goes up, I make money
+  - If stock market goes down, I lose money
+  - They are attractive in that
+    - They don't require lot of thought
+    - They have low expense ratio, since easy to implement
+
+- *Managed portfolios*: find somebody who is smart and pay them fair amount of money and in return they will pick winners for us
+
+- *Efficient-market hypothesis*: is a theory in financial economics that states that an asset's prices fully reflects all available information
+  - A direct implication is that it is impossible to beat the market consistently on a risk-adjusted basis since market prices should only react to new information or changes in discount rates
+
+- *lambda*: Creation of anonymous functions (i.e functions that are not bound to a name) at runtime
+  - Normal functions are define using def keyword, anonymous functions are defined using lambda keyword
+
+    e.g
+    #+BEGIN_SRC python
+      def def_demo(value):
+          return value ** 2
+
+
+      print(def_demo(8))  # 64
+
+      lambda_demo = lambda value: value ** 2
+
+      print(lambda_demo(8))  # 64
+    #+END_SRC
+
+- *Multiplicative*: if the amount of change is proportional to the current size,
+
+- *Additive*: assumes that task performance is the sum of sequential and independent processes
