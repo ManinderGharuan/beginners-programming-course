@@ -926,3 +926,20 @@ e.g
 - *Multiplicative*: if the amount of change is proportional to the current size,
 
 - *Additive*: assumes that task performance is the sum of sequential and independent processes
+
+* Lecture 24
+** What Do Computer Scientists Do?
+- They think computationally
+- Computational thinking will be a fundamental skill used by everyone in the world by the middle of the 21st century
+- Just like: *reading*, *riting*, and *rithmetic*
+
+- *Computational thinking*: is the thought processes involved in formulating a problem and expressing its solutions
+  - in such a way that a computer, human or machine, can effectively carry out
+  - It is an iterative process based on three stages
+    - Problem formulation (*abstraction*)
+    - Solution Expression (*automation*)
+    - Solution Execution and Evaluation (*analyses*) captured by the figure to the right
+
+    - *Abstraction*: is a technique for arranging complexity of computer systems
+      - It works by establishing a level of complexity on which a person interacts with the system, suppressing the more complex details below the current level
+      - Programmers works with an idealized interface (usually well defined) and can add additional levels of functionality that would otherwise be too complex to handle
